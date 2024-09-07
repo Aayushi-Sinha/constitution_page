@@ -1,0 +1,12 @@
+/* Basic styles for body */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #f4ece1;
+   
+  
+  }
+
+  
