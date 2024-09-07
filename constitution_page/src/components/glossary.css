@@ -67,7 +67,8 @@
   }
   
   nav ul li a:hover {
-    color: #000061;
+    color: #e9d2b7;
+    font-weight: 700;
   }
   
   section {
@@ -85,7 +86,7 @@
   
   h1 {
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
   
   p {
@@ -98,9 +99,10 @@
   
   .glossary-list{
     display:flex;
-    width:1600px;
+    /* width:1600px; */
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 30px;
     margin-bottom: 30px;
   }
@@ -108,15 +110,12 @@
     display: flex;
     align-items: center; 
     justify-content: space-between; 
-    width: 100%;
-    max-width: 1500px; 
     padding: 10px; 
-    border-bottom: 1px solid #ddd; 
+    border-bottom: 1.5px solid #ddd; 
   }
   .glossary-item h3 {
     margin-right: 30px;
     text-align: right;
-    
     flex: 1;
   }
   .glossary-item p {
@@ -148,6 +147,7 @@
     align-items: center;
     margin-top: 30px;
     width:1600px;
+    
   }
 
   .letter-button{
@@ -165,4 +165,19 @@
   .letter-button:hover{
     background-color: #1E3E49;
     color: white;
+  }
+
+  .articlelink{
+    color:#000061;
+    text-decoration: none;
+  }
+  .articlelink:hover{
+    color: #26267e;
+    font-weight: 800;
+  }
+
+  #home{
+    height: 300px;
+    background: #f4ece1;
+    border-bottom: 1.5px solid #cdcbcb; 
   }
