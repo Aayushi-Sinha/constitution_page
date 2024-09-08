@@ -95,7 +95,7 @@ const Home = () => {
                     {/* <h2 className="game-title">The <span>DRAGON's</span> DUNGEON</h2> */}
                     <h2 className="game-title">Institutions and Constitution</h2>
                     <div className="game-options">
-                    <button className="game-button">Enter Portal</button>
+                    <Link to="/index"><button className="game-button">Enter Portal</button></Link>
                     </div>
                 </main>
 

@@ -7,48 +7,48 @@ const Glossary = () => {
   const [textModified, setTextModified] = useState(false);
   const [selectedLetter, setSelectedLetter] = useState('');
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const newScrollPosition = window.scrollY;
-      setScrollPosition(newScrollPosition);
-      setTextModified(newScrollPosition > 100); 
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const newScrollPosition = window.scrollY;
+  //     setScrollPosition(newScrollPosition);
+  //     setTextModified(newScrollPosition > 100); 
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
-  const colorSet2 = {
-    backgroundColor: '#1E3E49', 
-    textColor: '#FFF' 
-  };
+  // const colorSet2 = {
+  //   backgroundColor: '#1E3E49', 
+  //   textColor: '#FFF' 
+  // };
 
-  const colorSet1 = {
-    backgroundColor: '#183151',
-    textColor: '#FFF'
-  };
+  // const colorSet1 = {
+  //   backgroundColor: '#183151',
+  //   textColor: '#FFF'
+  // };
 
-  const threshold1 = 100;
-  const currentColorSet = scrollPosition < threshold1 ? colorSet1 : colorSet2;
+  // const threshold1 = 100;
+  // const currentColorSet = scrollPosition < threshold1 ? colorSet1 : colorSet2;
 
-  const navbarStyle = {
-    backgroundColor: currentColorSet.backgroundColor,
-    boxShadow: scrollPosition > threshold1 ? '0 2px 10px rgba(0, 0, 0, 0.3)' : 'none',
-    transition: 'background-color 0.5s ease',
-  };
+  // const navbarStyle = {
+  //   backgroundColor: currentColorSet.backgroundColor,
+  //   boxShadow: scrollPosition > threshold1 ? '0 2px 10px rgba(0, 0, 0, 0.3)' : 'none',
+  //   transition: 'background-color 0.5s ease',
+  // };
 
-  const logoStyle = {
-    transform: `scale(${Math.max(1 - scrollPosition / 900, 0.95)})`,
-    color: currentColorSet.textColor, 
-  };
-
-  // const linkStyle = {
+  // const logoStyle = {
+  //   transform: `scale(${Math.max(1 - scrollPosition / 900, 0.95)})`,
   //   color: currentColorSet.textColor, 
   // };
 
-  const logoText = textModified ? '🏛️ Institutions and Constitution' : '🏛️ Institutions and Constitution';
+  // // const linkStyle = {
+  // //   color: currentColorSet.textColor, 
+  // // };
+
+  // const logoText = textModified ? '🏛️ Institutions and Constitution' : '🏛️ Institutions and Constitution';
 
 
     const terms = [
@@ -133,7 +133,7 @@ const Glossary = () => {
   
   return (
     <div>
-      <header className="navbar" style={navbarStyle}>
+      {/* <header className="navbar" style={navbarStyle}>
       <div className="container">
         <div className="logo" style={logoStyle}>
           <h1>{logoText}</h1>
@@ -147,7 +147,7 @@ const Glossary = () => {
           </ul>
         </nav>
       </div>
-      </header>
+      </header> */}
 
       <section id="home">
           <h1>GLOSSARY</h1>
