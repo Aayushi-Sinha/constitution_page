@@ -1,0 +1,83 @@
+
+
+/* Reset */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    background-color: #a85d00;
+    justify-content: space-between; /* Ensures space between elements */
+    display: flex;
+    flex-direction: row;
+    height: 120vh; /* Ensures the container takes up full vertical space */
+    width: 100%;
+    padding: 100px;
+    background: linear-gradient(135deg, #ae8261, #000000);
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background-color: linear-gradient(135deg, #8a4815, #000000);
+    width: 75%;
+    height: 620px;
+    padding: 0;
+    margin-top: 0;
+  }
+  
+  .bar1, .bar2 {
+    width: 25%;
+    height: 620px;
+    background-color: #b84600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .icon {
+    width: 80px;
+    height: 80px;
+    border-width: 2px;
+    border-radius: 50%; /* Makes the icons round */
+    object-fit: cover;
+    background-color: #fff; /* Optional background color for icons */
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+  }
+  
+  .bg-green {
+    background-color: #1926b9;
+  }
+  
+  .bg-red {
+    background-color: #9e0000;
+  }
+
+
+
+  .has-plant {
+    background-image: url("D:\\Aayushi\\VS CODE\\constitution_page\\constitution_page\\src\\images\\mario_plant.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 95% 100%;
+  }
