@@ -2,11 +2,424 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-    background-color: #f4ece1;
-   
-  
+}
+
+
+
+/* General Container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Cinzel', 'serif';
+    background-color: #1e1e1e;
+    background-image: url("D:\Aayushi\VS CODE\constitution_page\constitution_page\src\images\game_back.jpeg");
+    background-repeat: no-repeat;  
+    background-position: center;   
+    background-size: 95% 90%;
+
+    
+
+
+    display: table;    
+    background-attachment: fixed;
+
+
+    
   }
 
+
+  .about{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    margin-top: 30px;
+    margin: 60px;
+    font-family: 'Cinzel', 'serif';
+
+    background: linear-gradient(135deg, #000061, #000000);
+
+    background-color: #000061;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px 10px rgb(255, 112, 112);
+
+  }
+
+  .about-head{
+
+    font-size: 40px;
+    font-weight: 500;
+
+  }
+
+  .about-content{
+    font-size: 20px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-weight: 500;
+  }
+
+  .Page{
+   
+    display: flex;
+    flex-direction: column;
+
+   
+    
+
+  }
+
+
+
+  .section-2{
+    height: 100vh;
+    background-image: url("D:\Aayushi\VS CODE\constitution_page\constitution_page\src\images\scales2.png");
+    background-repeat: no-repeat;  
+    background-position: center;   
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    display: table;
+    background-attachment: fixed;
+
+    background-color: #f4ece1;
+
+
+  }
+
+  .footer{
+    display: table;
+    background-attachment: fixed;
+
+  }
   
+
+  
+  /* Game Title */
+  .game-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .game-title {
+    font-size: 60px;
+    color: #ffffff;
+  }
+  
+  .game-title span {
+    color: #ff0000;
+  }
+  
+  /* Buttons for game options */
+  .game-options {
+    margin-top: 20px;
+  }
+  
+  .game-button {
+    background-color: #ff0000;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: inherit;
+  }
+  
+  .game-button:hover {
+    background-color: #ff8800;
+  }
+  
+
+  
+  /* Fire Animation
+  .fire-animation {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background: url("C:\Users\aayus\Downloads\ashoka chakra.png") repeat-x;
+    animation: fire 0.7s steps(10) infinite;
+    object-fit: cover;
+  } */
+  
+  @keyframes fire {
+    0% { background-position: 0 0; }
+    100% { background-position: -300px 0; }
+  }
+
+
+
+
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .event {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Ensure that the timeline container takes up the full width and centers its contents */
+.timeline-contain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    width: 100%; /* Full width to ensure centering */
+    background-color: transparent; /* Remove background color */
+}
+
+.timeline-heading{
+    font-size: 40px;
+    font-weight: 600;
+    font-family: 'Cinzel', 'serif';
+    justify-content: center;
+    margin-bottom: 50px;
+
+}
+
+.main-timeline{
+    font-family: sans-serif;
+    position: relative;
+    width: 100%; /* Ensure it takes up full width for proper centering */
+}
+
+.main-timeline:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.main-timeline .timeline{
+    width: 50%;
+    padding: 0 0 0 70px;
+    margin: 0 0 0 50px;
+    float: right;
+    position: relative;
+}
+
+.main-timeline .timeline:before{
+    content: '';
+    background-color: #D219B4;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: -70px;
+    top: 50%;
+}
+
+.main-timeline .timeline-content{
+    color: #fff;
+    background: linear-gradient(to right,#E50091,#AE0D97);
+    min-height: 140px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px -5px #555;
+    display: block;
+    position: relative;
+}
+
+.main-timeline .timeline-content:before,
+.main-timeline .timeline-content:after{
+    content: '';
+    background: #E50091;
+    height: 16px;
+    width: 16px;
+    transform: translateY(-50%) rotate(45deg);
+    position: absolute;
+    left: -8px;
+    top: 50%;
+}
+
+.main-timeline .timeline-content:after{
+    background: linear-gradient(to right,#D219B4,#E50091);
+    transform: translateY(-50%) rotate(0);
+    left: -140px;
+    width: 140px;
+    height: 5px;
+}
+
+.main-timeline .timeline-content:hover{ 
+    text-decoration: none; 
+}
+
+.main-timeline .timeline-icon{
+    color: rgba(0,0,0,0.2);
+    font-size: 40px;
+    position: absolute;
+    top: 15px;
+    left: -90px;
+}
+
+.main-timeline .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 0 7px 0;
+}
+
+.main-timeline .description{
+    font-size: 15px;
+    margin: 0;
+}
+
+.main-timeline .timeline:nth-child(even){
+    padding: 0 70px 0 0;
+    margin: 0 70px 0 0;
+    float: left;
+}
+
+.main-timeline .timeline:nth-child(even):before{
+    left: auto;
+    right: -71px;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-content:before{
+    left: auto;
+    right: -8px;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-content:after{
+    left: auto;
+    right: -140px;
+}
+
+.main-timeline .timeline:nth-child(even) .timeline-icon{
+    left: auto;
+    right: -90px;
+}
+
+.main-timeline .timeline:nth-child(4n+2):before{ 
+    background-color: #17B1EF; 
+}
+
+.main-timeline .timeline:nth-child(4n+2) .timeline-content{
+    background: linear-gradient(to right,#3b29cf,#4267D9);
+}
+
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:before{ 
+    background: #4267D9; 
+}
+
+.main-timeline .timeline:nth-child(4n+2) .timeline-content:after{
+    background: linear-gradient(to right,#4267D9,#17B1EF);
+}
+
+.main-timeline .timeline:nth-child(4n+3):before{ 
+    background-color: #04E2CB; 
+}
+
+.main-timeline .timeline:nth-child(4n+3) .timeline-content{
+    background: linear-gradient(to right,#42c966,#5BD80B);
+}
+
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:before{ 
+    background: #42c966; 
+}
+
+.main-timeline .timeline:nth-child(4n+3) .timeline-content:after{
+    background: linear-gradient(to right,#04E2CB,#42c966);
+}
+
+.main-timeline .timeline:nth-child(4n+4):before{
+    background-color: #EFBC2F; 
+}
+
+.main-timeline .timeline:nth-child(4n+4) .timeline-content{
+    background: linear-gradient(to right,#E03C30,#FF7125);
+}
+
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:before{ 
+    background: #FF7125; 
+}
+
+.main-timeline .timeline:nth-child(4n+4) .timeline-content:after{
+    background: linear-gradient(to right,#FF7125,#EFBC2F);
+}
+
+@media screen and (max-width:767px){
+    .main-timeline .timeline,
+    .main-timeline .timeline:nth-child(even){
+        width: 100%;
+        padding: 0 0 0 40px;
+        margin-bottom: 20px;
+    }
+    .main-timeline .timeline:before,
+    .main-timeline .timeline:nth-child(even):before{
+        transform: translateY(0);
+        left: 0;
+        right: auto;
+        top: 47px;
+    }
+    .main-timeline .timeline:nth-child(4n+2) .timeline-content{
+        background: linear-gradient(to left,#3b29cf,#4267D9);
+    }
+    .main-timeline .timeline:nth-child(4n+4) .timeline-content{
+        background: linear-gradient(to left,#E03C30,#FF7125);
+    }
+    .main-timeline .timeline-content:before,
+    .main-timeline .timeline:nth-child(even) .timeline-content:before{
+        transform: translateY(0) rotate(45deg);
+        top: 45px;
+        left: -4px;
+    }
+    .main-timeline .timeline-content:after,
+    .main-timeline .timeline:nth-child(even) .timeline-content:after{
+        width: 40px;
+        transform: translateY(0);
+        right: auto;
+        left: -38px;
+        top: 50px;
+    }
+    .main-timeline .timeline:nth-child(even) .timeline-content:after{
+        transform: translateY(0) rotateY(180deg);
+    }
+    .main-timeline .timeline-icon,
+    .main-timeline .timeline:nth-child(even) .timeline-icon{
+        font-size: 22px;
+        left: -30px;
+        right: auto;
+    }
+}
+
+@media screen and (max-width:567px){
+    .main-timeline .title{ font-size: 18px; }
+}
