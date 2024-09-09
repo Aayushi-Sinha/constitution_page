@@ -19,9 +19,9 @@ function Footer() {
         <div className="footer-right">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="#" className="social-icon">Facebook</a>
-            <a href="#" className="social-icon">Twitter</a>
-            <a href="#" className="social-icon">Instagram</a>
+            <a href="https://www.facebook.com/" className="social-icon">Facebook</a>
+            <a href="https://x.com/?lang=en" className="social-icon">Twitter</a>
+            <a href="https://www.instagram.com/" className="social-icon">Instagram</a>
           </div>
         </div>
       </div>
