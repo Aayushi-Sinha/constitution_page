@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState, useRef } from 'react';
 import './glossary.css';
+import Footer from './Footer.jsx'
 
 const Glossary = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -141,7 +142,7 @@ const Glossary = () => {
         <nav>
           <ul>
             <li><Link to="/" >Home</Link></li>
-            <li><Link to="/glossary" >Tracks</Link></li>
+            <li><Link to="/index" >Guide</Link></li>
             <li><Link to="/glossary" >Login</Link></li>
             <li><Link to="/glossary" >Sign Up</Link></li>
           </ul>
@@ -176,7 +177,9 @@ const Glossary = () => {
           </div>
         ))}
       </div>
-    </div>      
+      <Footer/>
+    </div> 
+         
   );
 };
 

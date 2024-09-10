@@ -16,9 +16,10 @@ function Index() {
       
         <div className="icon-container">
         <h2>FEATURES</h2>
-        <Link to="/"  rel="noopener noreferrer">
-            <img src={lawImage} alt="Icon 1" className="icon" />
-          </Link>
+        {/* <Link to="/themes"><img src={lawImage} alt="Icon 1" className="icon" /></Link> */}
+        <a href="https://anshika-26.github.io/crossword/chakra.html" target="_blank" rel="noopener noreferrer">
+          <img src={lawImage} alt="Icon 1" className="icon" />
+          </a>
           <Link to="/glossary"><img src={GlossaryImage} alt="Icon 2" className="icon" /></Link>
 
           <Link to="/leaderboard" target="_blank" rel="noopener noreferrer">
@@ -45,7 +46,7 @@ function Index() {
       <div className="bar2">
         <div className="icon-container">
           <h2>Games</h2>
-          <a href="https://example.com/icon1" target="_blank" rel="noopener noreferrer">
+          <a href="https://anshika-26.github.io/crossword/index.html" target="_blank" rel="noopener noreferrer">
             <img src={lawImage} alt="Icon 1" className="icon" />
           </a>
           <a href="https://example.com/icon2" target="_blank" rel="noopener noreferrer">
