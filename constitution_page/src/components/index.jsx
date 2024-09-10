@@ -37,7 +37,7 @@ function Index() {
             key={index}
             className={`grid-item ${index % 2 === 0 ? "bg-green" : "bg-red"} ${index % 3 === 0 ? "has-plant" : ""}`}
           >
-            {item}
+            {/*{item}*/}
           </div>
         ))}
       </div>
