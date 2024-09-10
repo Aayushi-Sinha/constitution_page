@@ -5,7 +5,7 @@ import Home from './components/Home';
 import Glossary from './components/glossary';
 import RouteMap from './components/RouteMap';
 import Index from './components/index';
-// import Chakra from './components/chakra'
+import Leaderboard from './components/leaderboard';
 
 
 function App() {
@@ -16,8 +16,7 @@ function App() {
         <Route path="/glossary" element={<Glossary />} />
         <Route path="/preamble" element={ <RouteMap/>} />
         <Route path="/index" element={ <Index/>} />
-        {/* <Route path="/themes" element={ <Chakra/>} /> */}
-
+        <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
     </Router>
   );

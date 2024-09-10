@@ -76,7 +76,7 @@ body {
 
 
   .has-plant {
-    background-image: url("D:\\Aayushi\\VS CODE\\constitution_page\\constitution_page\\src\\images\\mario_plant.png");
+    background-image: url("../images/mario_plant.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 95% 100%;

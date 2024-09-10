@@ -4,9 +4,6 @@ body, html {
     padding: 0;
 }
 
-
-
-/* General Container */
 .game-container {
     display: flex;
     flex-direction: column;
@@ -17,7 +14,7 @@ body, html {
     color: white;
     font-family: 'Cinzel', 'serif';
     background-color: #1e1e1e;
-    background-image: url("D:\Aayushi\VS CODE\constitution_page\constitution_page\src\images\game_back.jpeg");
+    background-image: url("../images//game_back.jpeg");
     background-repeat: no-repeat;  
     background-position: center;   
     background-size: 95% 90%;
@@ -84,7 +81,7 @@ body, html {
 
   .section-2{
     height: 100vh;
-    background-image: url("D:\Aayushi\VS CODE\constitution_page\constitution_page\src\images\scales2.png");
+    background-image: url("../images/scales2.png");
     background-repeat: no-repeat;  
     background-position: center;   
     background-size: cover;

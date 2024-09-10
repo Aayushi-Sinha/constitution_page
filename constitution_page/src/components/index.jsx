@@ -21,9 +21,10 @@ function Index() {
           <img src={lawImage} alt="Icon 1" className="icon" />
           </a>
           <Link to="/glossary"><img src={GlossaryImage} alt="Icon 2" className="icon" /></Link>
-          <a href="https://example.com/icon3" target="_blank" rel="noopener noreferrer">
+
+          <Link to="/leaderboard" target="_blank" rel="noopener noreferrer">
             <img src={lawImage} alt="Icon 3" className="icon" />
-          </a>
+          </Link>
         
           
         </div>

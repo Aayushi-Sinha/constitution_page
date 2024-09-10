@@ -1,54 +1,55 @@
 import { Link } from 'react-router-dom';
 import React, { useEffect, useState, useRef } from 'react';
 import './glossary.css';
+import Footer from './Footer.jsx'
 
 const Glossary = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [textModified, setTextModified] = useState(false);
   const [selectedLetter, setSelectedLetter] = useState('');
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const newScrollPosition = window.scrollY;
-  //     setScrollPosition(newScrollPosition);
-  //     setTextModified(newScrollPosition > 100); 
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      const newScrollPosition = window.scrollY;
+      setScrollPosition(newScrollPosition);
+      setTextModified(newScrollPosition > 100); 
+    };
 
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
-  // const colorSet2 = {
-  //   backgroundColor: '#1E3E49', 
-  //   textColor: '#FFF' 
-  // };
+  const colorSet2 = {
+    backgroundColor: '#1E3E49', 
+    textColor: '#FFF' 
+  };
 
-  // const colorSet1 = {
-  //   backgroundColor: '#183151',
-  //   textColor: '#FFF'
-  // };
+  const colorSet1 = {
+    backgroundColor: '#183151',
+    textColor: '#FFF'
+  };
 
-  // const threshold1 = 100;
-  // const currentColorSet = scrollPosition < threshold1 ? colorSet1 : colorSet2;
+  const threshold1 = 100;
+  const currentColorSet = scrollPosition < threshold1 ? colorSet1 : colorSet2;
 
-  // const navbarStyle = {
-  //   backgroundColor: currentColorSet.backgroundColor,
-  //   boxShadow: scrollPosition > threshold1 ? '0 2px 10px rgba(0, 0, 0, 0.3)' : 'none',
-  //   transition: 'background-color 0.5s ease',
-  // };
+  const navbarStyle = {
+    backgroundColor: currentColorSet.backgroundColor,
+    boxShadow: scrollPosition > threshold1 ? '0 2px 10px rgba(0, 0, 0, 0.3)' : 'none',
+    transition: 'background-color 0.5s ease',
+  };
 
-  // const logoStyle = {
-  //   transform: `scale(${Math.max(1 - scrollPosition / 900, 0.95)})`,
+  const logoStyle = {
+    transform: `scale(${Math.max(1 - scrollPosition / 900, 0.95)})`,
+    color: currentColorSet.textColor, 
+  };
+
+  // const linkStyle = {
   //   color: currentColorSet.textColor, 
   // };
 
-  // // const linkStyle = {
-  // //   color: currentColorSet.textColor, 
-  // // };
-
-  // const logoText = textModified ? '🏛️ Institutions and Constitution' : '🏛️ Institutions and Constitution';
+  const logoText = textModified ? '🏛️ Institutions and Constitution' : '🏛️ Institutions and Constitution';
 
 
     const terms = [
@@ -90,7 +91,7 @@ const Glossary = () => {
       { term: "Certiorari",link:"https://en.wikipedia.org/wiki/Certiorari#:~:text=In%20law%2C%20certiorari%20is%20a,the%20superior%20court%20for%20review.", definition: "issued by a higher court to a lower court or tribunal, either to quash its decision or to transfer the case to the higher court for review" },
       { term: "Quo Warranto",link:"https://en.wikipedia.org/wiki/Quo_warranto", definition: "writ used to question the legal authority of a person holding a public office" },
       { term: "Zero Hour ",link:"https://byjus.com/free-ias-prep/zero-hour/", definition: " The time immediately following the Question Hour in Parliament, where members raise urgent matters without prior notice" },
-      // { term: "", link:"",definition: "" }, 
+      { term: "Booth", link:"",definition: "Voting booth in India" }, 
       // { term: "",link:"", definition: "" },
       // { term: "U",link:"", definition: "" },
       // { term: "V",link:"", definition: "" },
@@ -133,24 +134,24 @@ const Glossary = () => {
   
   return (
     <div>
-      {/* <header className="navbar" style={navbarStyle}>
-      <div className="container">
+      <header className="navbar" style={navbarStyle}>
+      <div className="container1">
         <div className="logo" style={logoStyle}>
           <h1>{logoText}</h1>
         </div>
         <nav>
           <ul>
             <li><Link to="/" >Home</Link></li>
-            <li><Link to="/glossary" >Tracks</Link></li>
+            <li><Link to="/index" >Guide</Link></li>
             <li><Link to="/glossary" >Login</Link></li>
             <li><Link to="/glossary" >Sign Up</Link></li>
           </ul>
         </nav>
       </div>
-      </header> */}
+      </header>
 
       <section id="home">
-          <h1>GLOSSARY</h1>
+          <h1 id="glossarytit">GLOSSARY</h1>
           <div className="letters">
           {groupedTerms.map((group) => (
             <button
@@ -176,7 +177,9 @@ const Glossary = () => {
           </div>
         ))}
       </div>
-    </div>      
+      <Footer/>
+    </div> 
+         
   );
 };
 
